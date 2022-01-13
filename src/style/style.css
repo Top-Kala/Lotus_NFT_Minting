@@ -1,6 +1,6 @@
 .side {
     height: 100vh;
-    background-color: rgb(240 223 225);
+    background-color: rgb(206, 145, 191);
     position: absolute;
     float: right;
     right: 0px;
@@ -12,7 +12,7 @@
 }
 
 .cancelicon {
-    font-size: 2.5rem !important;
+    font-size: 2.3rem !important;
     position: absolute;
     right: 0.1rem;
 }
@@ -30,6 +30,24 @@
 .sidebar_container {
     padding-left: 1.5rem;
     font-size: 2rem;
+}
+
+.sidebar_logo {
+    width: 8.125rem;
+}
+
+.sidebar_content {
+    text-align: center;
+}
+
+.sidebar_link_container {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+    text-align: left;
+}
+
+.sidebar_link_container a {
+    color: white !important;
 }
 
 .cover {
@@ -102,7 +120,7 @@
 
 .mint_container p{
     color: rgb(241, 11, 118);
-    font-size: 1.5rem !important;
+    font-size: 2.5rem !important;
 }
 
 .mint_button {
@@ -135,6 +153,12 @@
     width: 3rem;
     height: 3rem;
     margin-right: 2rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.instagram {
+    padding-top: 2rem !important;
 }
 
 .menuicon {

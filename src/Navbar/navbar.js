@@ -5,16 +5,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import {
-    Checkbox,
-    Grid,
-    Header,
-    Icon,
-    Image,
-    Menu,
-    Segment,
-    Sidebar,
-} from 'semantic-ui-react';
+import InfoIcon from '@mui/icons-material/Info';
+import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
+import logo from './lotus.png';
 import Logo from './logo.js';
 import '../style/style.css';
 
@@ -67,10 +62,15 @@ function Navigation() {
                         <IconButton color="secondary" onClick={() => toogleSidebar()}>
                             <CloseIcon className='cancelicon'/>
                         </IconButton>
-                        <Nav.Link href="/">About</Nav.Link>
-                        <Nav.Link href="/">KYC</Nav.Link>
-                        <Nav.Link href="/">Contact</Nav.Link>
-                        <Nav.Link href="/">Marketplace</Nav.Link>
+                        <div className='sidebar_content'>
+                            <img src={logo} className='sidebar_logo' alt='Sidebar-logo'/>
+                            <div className='sidebar_link_container'>
+                                <Nav.Link href="/"><InfoIcon /> About</Nav.Link>
+                                <Nav.Link href="/"><BeenhereRoundedIcon /> KYC</Nav.Link>
+                                <Nav.Link href="/"><PermContactCalendarIcon /> Contact</Nav.Link>
+                                <Nav.Link href="/"><StorefrontIcon/> Marketplace</Nav.Link>
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </div>
