@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Navbar } from "react-bootstrap";
+import { Container, Navbar, Nav,  } from "react-bootstrap";
 import Button from '@mui/material/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from './logo.js';
@@ -24,13 +24,20 @@ const ConnectButton = () => {
 function Header() {
     return (
         <div>
-            <Navbar expand="xxl" className='white' sticky="top">
-                <Container className='nav_container'>
+            <Navbar expand="lg" sticky="top">
+                <Container className='header'>
                     <Navbar.Brand ><Logo /></Navbar.Brand>
-                    <Navbar className='nav-item nav-link text-white justify-content-end'>
-                        <Navbar className='nav-link nav_para'>ABOUT KYC CONTACT MARKETPLACE</Navbar>
-                        <Button className='nab_button' variant="contained">CONNECT WALLET</Button>
-                    </Navbar>
+                    <div className='nav_container'>
+                        <Navbar className='justify-content-end'>
+                            <Nav className='navbar_button_container'>
+                                <Nav.Link href="/">About</Nav.Link>
+                                <Nav.Link href="/">KYC</Nav.Link>
+                                <Nav.Link href="/">Contact</Nav.Link>
+                                <Nav.Link href="/">Marketplace</Nav.Link>
+                            </Nav>
+                            <Button className='connect_button' variant="contained">CONNECT WALLET</Button>
+                        </Navbar>
+                    </div>
                 </Container>
             </Navbar>
         </div>

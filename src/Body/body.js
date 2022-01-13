@@ -11,8 +11,10 @@ function Mainbody() {
                 <img src={animatelotus} className='animatelotus' />
             </div>
             <div className='mint_container'>
-                <p>XXXX/1500</p>
-                <Button className='mint_button' variant="contained">CONNECT WALLET</Button>
+                <div style={{marginLeft:"auto", marginRight:"auto"}}>
+                    <p>1/xxxx</p>
+                    <Button className='mint_button' variant="contained">CONNECT WALLET</Button>
+                </div>
             </div>
         </div>
     )

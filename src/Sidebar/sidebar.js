@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import {
     ProSidebar,
     Menu,
@@ -9,14 +8,9 @@ import {
     SidebarFooter,
     SidebarContent,
 } from 'react-pro-sidebar';
-
-import { FaRegHeart } from 'react-icons/fa';
-import { FiLogOut, FiArrowLeftCircle, FiArrowRightCircle } from 'react-icons/fi';
-import { BsFillWalletFill } from "react-icons/bs";
-import { MdSwapHoriz } from "react-icons/md";
+import Button from '@mui/material/Button';
 import 'react-pro-sidebar/dist/css/styles.css';
 import './header.css';
-import { Button } from 'bootstrap';
 
 const MenuItems = [
 ];
@@ -46,6 +40,9 @@ const Header = () => {
                     </SidebarHeader>
                     <SidebarContent>
                         <Button>ABOUT</Button>
+                        <Button>KYC</Button>
+                        <Button>CONTACT</Button>
+                        <Button>MARKETPLACE</Button>
                     </SidebarContent>
                 </ProSidebar>
             </div>

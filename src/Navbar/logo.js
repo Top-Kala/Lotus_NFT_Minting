@@ -4,8 +4,8 @@ import logo from './lotus.png';
 
 const Logo = () => {
     return (
-        <div>
-            <img src={logo} alt="Logo" height="130" />
+        <div className='logo_container' >
+            <img src={logo} alt="Logo" height="150" />
         </div>
     );
 };

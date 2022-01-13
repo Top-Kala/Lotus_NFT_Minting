@@ -1,21 +1,38 @@
-.nab_button{
+.header {
+    margin: 0 7.1875rem !important;
+    max-width: 93.75rem;
+}
+
+.logo_container {
+    padding-top: 1.5625rem !important;
+}
+
+.connect_button{
     background-color: rgb(187, 133, 238) !important;
-    font-size: 1rem !important;
+    font-size: 1.2rem !important;
     border-radius: 0.5rem !important;
     border: none;
 }
 
-.nav_container {
-    padding: 0 4vw !important;
+.navbar_button_container {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 
-.nav_para {
-    color: rgb(27, 150, 88);
-    font-size: 1.3rem;
+.navbar_button_container  a {
+    color: white !important;
+    background-color: rgb(241, 11, 118);
+    margin-right: 3rem;
+    border-radius: 0.3125rem;
+}
+
+.nav_container {
+    padding: 0 0 !important;
+    margin-top: -5.7rem;
 }
 
 .main_container {
-    margin: 7rem 0 0;
+    margin: 2rem 0 0;
     font-size: 1.5rem;
     color: white;
     padding: 0 6vw;
@@ -25,34 +42,34 @@
 }
 
 .mint_container {
-    margin: 6rem 0 0;
-    width: 20vw;
     grid-row-start: 1;
     grid-row-end: 3;
+    justify-content: space-between;
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
 .mint_container p{
-    display: grid;
-    justify-content: center;
+    color: rgb(241, 11, 118);
+    font-size: 1.5rem !important;
 }
 
 .mint_button {
     font-size: 1.5rem !important;
-    background-color: rgb(81, 199, 134) !important;
-    padding: 1.1rem 0 !important;
-    border-radius: 1rem !important;
-    width: 100%;
-
+    background-color: rgb(241, 11, 118) !important;
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 0.3125rem !important
 }
 
 .animatelotus_container {
     width: 47rem;
-    height: 35rem;
-    border-radius: 4.5rem;
-    box-shadow: 0.5rem 1rem 2rem 2.5rem rgba(70, 29, 60, 0.418);
+    height: 30.7rem;
+    border-radius: 3.5rem;
     display: grid;
     justify-content: center;
     align-items: center;
+    background-color: rgba(216, 191, 216, 0.651);
 }
 
 .animatelotus {
@@ -65,13 +82,10 @@
 
 }
 
-.footer_container img {
+.iconsize {
     width: 3rem;
+    height: 3rem;
     margin-right: 2rem;
-}
-
-.facebookicon {
-    width: 1.5rem !important;
 }
 
 
