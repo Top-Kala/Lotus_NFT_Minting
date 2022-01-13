@@ -4,6 +4,17 @@ import Button from '@mui/material/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import {
+    Checkbox,
+    Grid,
+    Header,
+    Icon,
+    Image,
+    Menu,
+    Segment,
+    Sidebar,
+} from 'semantic-ui-react';
 import Logo from './logo.js';
 import '../style/style.css';
 
@@ -23,7 +34,11 @@ const ConnectButton = () => {
     );
 }; */
 
-function Header() {
+function Navigation() {
+    const [visible, setVisible] = useState(false);
+    const toogleSidebar = () => {
+        setVisible(!visible);
+    }
     return (
         <div>
             <Navbar expand="lg" sticky="top">
@@ -38,15 +53,31 @@ function Header() {
                                 <Nav.Link href="/">Marketplace</Nav.Link>
                             </Nav>
                             <Button className='connect_button' variant="contained">CONNECT WALLET</Button>
-                            <IconButton size="xxlarge" color="secondary">
+                            <IconButton size="xxlarge" color="secondary" onClick={() => toogleSidebar()}>
                                 <MenuIcon className='menuicon'/>
                             </IconButton>
                         </Navbar>
                     </div>
                 </Container>
             </Navbar>
+
+            <div className={visible? 'side side-show' : 'side hide'}>
+                <Container>
+                    <div className='sidebar_container'>
+                        <IconButton color="secondary" onClick={() => toogleSidebar()}>
+                            <CloseIcon className='cancelicon'/>
+                        </IconButton>
+                        <Nav.Link href="/">About</Nav.Link>
+                        <Nav.Link href="/">KYC</Nav.Link>
+                        <Nav.Link href="/">Contact</Nav.Link>
+                        <Nav.Link href="/">Marketplace</Nav.Link>
+                    </div>
+                </Container>
+            </div>
+
+            <div className={visible ? 'cover cover-show' : 'cover hide'}></div>
         </div>
     )
 }
 
-export default Header;
+export default Navigation;
