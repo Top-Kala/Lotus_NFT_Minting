@@ -5,11 +5,14 @@ import FooterPart from './Footer/footer.js';
 
 function Content() {
     return (
-        <div>
-            <Header />
-            <Mainbody />
-            <FooterPart />
-        </div>
+        <>
+            <div>
+                <Header />
+                <Mainbody />
+                <FooterPart />           
+            </div>
+            
+        </>    
     )
 }
 

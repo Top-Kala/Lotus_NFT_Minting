@@ -7,6 +7,11 @@
     padding-top: 1.5625rem !important;
 }
 
+.logo {
+    height: 150px;
+}
+
+
 .connect_button{
     background-color: rgb(187, 133, 238) !important;
     font-size: 1.2rem !important;
@@ -79,7 +84,6 @@
 
 .footer_container {
     padding: 2.2vw 5vw;
-
 }
 
 .iconsize {
@@ -88,9 +92,152 @@
     margin-right: 2rem;
 }
 
+.menuicon {
+    width: 3rem !important;
+    height: 100% !important;
+    margin-left: 1rem;
+    display: none !important;
+}
+
+@media (max-width: 1600px) {
+    .navbar_button_container {
+        display: none;
+    }
+    .menuicon {
+        display: block !important;
+    }
+}
 
 @media (max-width: 1450px) {
-    .video {
-        width: 50rem;
+    .animatelotus_container {
+        width: 40rem;
+        height: 34rem;
+    }
+    .mint_button {
+        font-size: 1rem !important;
+    }
+    .logo {
+        height: 100px;
+    }
+    .nav_container {
+        margin-top: 0rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main_container {
+        margin: 3rem 0 0;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .animatelotus_container {
+        width: 38rem;
+        height: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mint_container {
+        margin-top: 1rem;
+    }
+    .footer_container {
+        text-align: center;
+    }
+    .iconsize {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .connect_button {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 776px) {
+    .animatelotus_container {
+        width: 33rem;
+        height: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .logo {
+        height: 80px;
+    }
+    .header {
+        margin: 0 4.5rem !important;
+    }
+    .footer_container {
+        padding: 6vh 5vw;
+    }
+    .iconsize {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .animatelotus_container {
+        width: 27rem;
+        height: 25rem;
+    }
+    .animatelotus {
+        width: 20rem;
+        height:20rem;
+    }
+    .mint_container {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .connect_button {
+        font-size: 0.6rem !important;
+    }
+    .menuicon {
+        width: 2rem !important;
+        height: 100% !important;
+        margin-left: 1rem;
+    }
+    .logo {
+        height: 60px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo_container {
+        padding-top: 0rem !important;
+    }
+    .animatelotus_container {
+        width: 20rem;
+        height: 20rem;
+    }
+    .animatelotus {
+        width: 15rem;
+        height:15rem;
+    }
+    .main_container {
+        margin: 7rem 0 0;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .mint_container {
+        margin-top: 5rem;
+    }
+    .header {
+        margin: 0 2rem !important;
+    }
+    .mint_button {
+        font-size: 0.8rem !important;
+    }
+    .iconsize {
+        width: 1.8rem;
+        height: 2.5rem;
     }
 }

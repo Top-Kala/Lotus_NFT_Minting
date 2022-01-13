@@ -1,53 +1,64 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import {
-    ProSidebar,
+    Checkbox,
+    Grid,
+    Header,
+    Icon,
+    Image,
     Menu,
-    MenuItem,
-    SidebarHeader,
-    SidebarFooter,
-    SidebarContent,
-} from 'react-pro-sidebar';
-import Button from '@mui/material/Button';
-import 'react-pro-sidebar/dist/css/styles.css';
-import './header.css';
+    Segment,
+    Sidebar,
+} from 'semantic-ui-react';
 
-const MenuItems = [
-];
-
-
-const Header = () => {
-    const [menuCollapse, setMenuCollapse] = useState(false)
-
-    const menuIconClick = () => {
-        menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
-    };
-
-    const [selectedItem, setSelectedItem] = useState();
+const Sidebarex = () => {
+    const [visible, setVisible] = React.useState(false)
 
     return (
-        <>
-            <div id="header">
-                <ProSidebar collapsed={menuCollapse}>
-                    <SidebarHeader>
-                        <div className="logotext">
-                            <p>
-                                {menuCollapse ? "swap" : "swap & wallet"}
-                            </p>
-                        </div>
-                        <div className="closemenu" onClick={menuIconClick}>
-                        </div>
-                    </SidebarHeader>
-                    <SidebarContent>
-                        <Button>ABOUT</Button>
-                        <Button>KYC</Button>
-                        <Button>CONTACT</Button>
-                        <Button>MARKETPLACE</Button>
-                    </SidebarContent>
-                </ProSidebar>
-            </div>
-        </>
-    );
-};
+        <Grid columns={1}>
+            <Grid.Column>
+                <Checkbox
+                    checked={visible}
+                    label={{ children: <code>visible</code> }}
+                    onChange={(e, data) => setVisible(data.checked)}
+                />
+            </Grid.Column>
 
-export default Header;
+            <Grid.Column>
+                <Sidebar.Pushable as={Segment}>
+                    <Sidebar
+                        as={Menu}
+                        animation='overlay'
+                        icon='labeled'
+                        inverted
+                        onHide={() => setVisible(false)}
+                        vertical
+                        visible={visible}
+                        width='thin'
+                    >
+                        <Menu.Item as='a'>
+                            <Icon name='home' />
+                            Home
+                        </Menu.Item>
+                        <Menu.Item as='a'>
+                            <Icon name='gamepad' />
+                            Games
+                        </Menu.Item>
+                        <Menu.Item as='a'>
+                            <Icon name='camera' />
+                            Channels
+                        </Menu.Item>
+                    </Sidebar>
+
+                    <Sidebar.Pusher dimmed={visible}>
+                        <Segment basic>
+                            <Header as='h3'>Application Content</Header>
+                            <Image src='https://react.semantic-ui.com/images/wireframe/paragraph.png' />
+                        </Segment>
+                    </Sidebar.Pusher>
+                </Sidebar.Pushable>
+            </Grid.Column>
+        </Grid>
+    )
+}
+
+export default Sidebarex

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Container, Navbar, Nav,  } from "react-bootstrap";
 import Button from '@mui/material/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
 import Logo from './logo.js';
 import '../style/style.css';
 
@@ -36,6 +38,9 @@ function Header() {
                                 <Nav.Link href="/">Marketplace</Nav.Link>
                             </Nav>
                             <Button className='connect_button' variant="contained">CONNECT WALLET</Button>
+                            <IconButton size="xxlarge" color="secondary">
+                                <MenuIcon className='menuicon'/>
+                            </IconButton>
                         </Navbar>
                     </div>
                 </Container>
