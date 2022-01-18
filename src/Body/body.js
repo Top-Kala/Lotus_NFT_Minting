@@ -84,7 +84,7 @@ function Mainbody() {
             return;
         }
         
-        if (mintedCount >= 6) {
+        if (mintedCount >= 3) {
             console.log("Token count that you can mint is 3");
             return;
         }
