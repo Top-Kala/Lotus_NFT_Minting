@@ -12,6 +12,8 @@ import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
 import logo from './lotus.png';
 import Logo from './logo.js';
 import '../style/style.css';
+import { useSelector, useDispatch } from 'react-redux'
+import { getButtonTitle } from '../store/reducer'
 
 /* const Web3 = require("web3");
 
@@ -30,8 +32,8 @@ const ConnectButton = () => {
 }; */
 
 function Navigation() {
-    const [title, setTitle] = useState('CONNECT WALLET');
     const [visible, setVisible] = useState(false);
+    const btnTitle = useSelector(state => getButtonTitle(state));
     const toogleSidebar = () => {
         setVisible(!visible);
     }
@@ -48,7 +50,7 @@ function Navigation() {
                                 <Nav.Link href="/">Contact</Nav.Link>
                                 <Nav.Link href="/">Marketplace</Nav.Link>
                             </Nav>
-                            <Button className='connect_button' variant="contained">{title}</Button>
+                            <Button className='connect_button' variant="contained">{btnTitle}</Button>
                             <IconButton size="xxlarge" color="secondary" onClick={() => toogleSidebar()}>
                                 <MenuIcon className='menuicon'/>
                             </IconButton>

@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/style.css';
 import {ethers} from "ethers";
 import contract from "../assets/ABI/Lotus.json";
+import { useSelector, useDispatch } from 'react-redux';
+import { setButtonTitle } from '../store/action';
 
 function Mainbody() {
     const [value, setValue] = useState(1);
@@ -15,6 +17,8 @@ function Mainbody() {
     const [nftContract, setNftContract] = useState();
     const [mintedCount, setMintedCount] = useState(0);
     const [mintedNFTCount, setMintedNFTCount] = useState(0);
+    const dispatch = useDispatch();
+    // const buttonTitle = useSelector(state => state.buttonTitle);
     
     useEffect(() => {
         // Update the document title using the browser API
@@ -26,6 +30,8 @@ function Mainbody() {
             console.log('You need to install MetaMask extension.');
             setTitle('Connect Wallet');
             connectMetaMaskHandler();
+
+            dispatch(setButtonTitle('Connect Wallet'))
             return;
         }
     }, []);
@@ -34,6 +40,7 @@ function Mainbody() {
         // Have to check the ethereum binding on the window object to see if it's installed
         const { ethereum } = window
         return Boolean(ethereum && ethereum.isMetaMask)
+
     }
 
     const connectMetaMaskHandler = async () => {
@@ -48,6 +55,8 @@ function Mainbody() {
         const address = await provider.getSigner().getAddress()
         setAddress(address)
         console.log("Address:", address);
+
+        dispatch(setButtonTitle(address))
 
         const balance = await provider.getSigner().getBalance();
         setBalance(balance)
