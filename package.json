@@ -6,7 +6,8 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.6",
+    "@mui/material": "^5.2.8",
+    "@openzeppelin/contracts": "^4.4.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +17,7 @@
     "crypto": "^1.0.1",
     "crypto-browserify": "^3.12.0",
     "crypto-js": "^3.1.9-1",
+    "ethers": "^5.5.3",
     "http": "0.0.1-security",
     "https": "^1.0.0",
     "https-browserify": "^1.0.0",
@@ -39,7 +41,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "static-server . --port 9011"
   },
   "eslintConfig": {
     "extends": [
@@ -58,5 +61,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "static-server": "^2.2.1"
   }
 }

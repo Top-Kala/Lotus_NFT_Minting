@@ -30,6 +30,7 @@ const ConnectButton = () => {
 }; */
 
 function Navigation() {
+    const [title, setTitle] = useState('CONNECT WALLET');
     const [visible, setVisible] = useState(false);
     const toogleSidebar = () => {
         setVisible(!visible);
@@ -47,7 +48,7 @@ function Navigation() {
                                 <Nav.Link href="/">Contact</Nav.Link>
                                 <Nav.Link href="/">Marketplace</Nav.Link>
                             </Nav>
-                            <Button className='connect_button' variant="contained">CONNECT WALLET</Button>
+                            <Button className='connect_button' variant="contained">{title}</Button>
                             <IconButton size="xxlarge" color="secondary" onClick={() => toogleSidebar()}>
                                 <MenuIcon className='menuicon'/>
                             </IconButton>
