@@ -1,4 +1,4 @@
-# NFT_minting_AVAX
+# LOTUS NFT MINTING
 1. Open the command prompt in project folder downloaded from Git
 
 2. Install npm by running following the command
